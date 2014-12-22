@@ -1,0 +1,8 @@
+source "https://nexus2.nbnco.net.au/content/groups/rubygems/"
+
+gem 'rake'
+gem 'rspec', '~>2.14.0'
+gem 'nokogiri'
+gem 'cucumber'
+gem 'capybara'
+gem 'poltergeist'

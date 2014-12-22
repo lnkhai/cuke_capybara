@@ -1,0 +1,14 @@
+require 'rake/clean'
+require 'cucumber/rake/task'
+
+namespace :cuke_capybara do
+	namespace :cucumber do
+    %w[cooking sit].each do |profile|
+      Cucumber::Rake::Task.new(profile.to_sym) do |t|
+        FileUtils.mkdir_p('build')
+        t.cucumber_opts = %w{-r test/features test/features }
+        t.profile = profile.to_sym
+      end
+    end
+	end
+end
