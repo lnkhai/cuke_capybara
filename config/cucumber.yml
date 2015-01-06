@@ -1,7 +1,7 @@
 #this should be in a config/cucumber.yml or config/cucumber.yaml
-
-cooking:	-r features --color --format pretty --format html -out build/report.html 
-			--tags @cooking
-						
-sit: 		-r features --color --format pretty --format html -out build/report.html 
-			--tags ~@cooking
+cooking:    -r features --color --format pretty --format html --out build/report.html 
+            --tags @cooking
+            RUN_MODE=browser
+sit:        -r features --color --format pretty --format html --out build/report.html 
+            --tags ~@cooking
+            RUN_MODE=headless
